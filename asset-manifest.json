@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/kirillpanasiuk9.github.io/static/css/main.60972a36.css",
-    "main.js": "/kirillpanasiuk9.github.io/static/js/main.6830b129.js",
-    "index.html": "/kirillpanasiuk9.github.io/index.html",
-    "main.60972a36.css.map": "/kirillpanasiuk9.github.io/static/css/main.60972a36.css.map",
-    "main.6830b129.js.map": "/kirillpanasiuk9.github.io/static/js/main.6830b129.js.map"
+    "main.css": "/To-Do-List/static/css/main.60972a36.css",
+    "main.js": "/To-Do-List/static/js/main.6830b129.js",
+    "index.html": "/To-Do-List/index.html",
+    "main.60972a36.css.map": "/To-Do-List/static/css/main.60972a36.css.map",
+    "main.6830b129.js.map": "/To-Do-List/static/js/main.6830b129.js.map"
   },
   "entrypoints": [
     "static/css/main.60972a36.css",
