@@ -1,0 +1,62 @@
+:root {
+    --taskBorderColor: #435757;
+    --taskBackColor: transparent;
+    --taskEditShadowColor: #435757;
+    --taskHoverShadowColor: #435757;
+    --taskEditSaveButtonColor: #435757;
+    --taskEditSaveButtonTextColor: #d0b782;
+}
+
+[dark] {
+    --taskBorderColor: #d0b782;
+    --taskBackColor: transparent;
+    --taskEditShadowColor: #d0b782;
+    --taskHoverShadowColor: #d0b782;
+    --taskEditSaveButtonColor: #d0b782;
+    --taskEditSaveButtonTextColor: #435757;
+}
+
+
+
+
+.task {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 40px;
+    border: var(--taskBorderColor) 2px solid;
+    background-color: var(--taskBackColor);
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.task-edited {
+    box-shadow: 2px 2px 2px 2px var(--taskEditShadowColor);
+}
+
+.task:hover {
+    box-shadow: 2px 2px 2px 2px var(--taskHoverShadowColor);
+    transition: 0.2s;
+}
+
+.taskButtons {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saveEditButton {
+    width: 65px;
+    height: 30px;
+    background-color: var(--taskEditSaveButtonColor);
+    border-radius: 5px;
+    font-size: 13px;
+    color: var(--taskEditSaveButtonTextColor);
+}

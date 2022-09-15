@@ -1,0 +1,29 @@
+:root {
+    --checkBoxColor:#435757;
+}
+
+[dark] {
+    --checkBoxColor:#d0b782;
+}
+
+
+.checkboxWrapper {
+    height: 25px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.forCheckbox {
+    cursor: pointer;
+}
+
+.forCheckbox svg {
+    width: 25px;
+    height: 25px;
+}
+
+.forCheckbox svg path {
+    fill: var(--checkBoxColor);
+}

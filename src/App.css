@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+
+:root {
+    --backgroundColor: #d0b782;
+    --appBorderTopColor: #435757;
+    --headerColor: #435757;
+    --noTaskColor: #435757;
+}
+
+[dark] {
+    --backgroundColor: #0d261a;
+    --appBorderTopColor: #d0b782;
+    --headerColor: #d0b782;
+    --noTaskColor: #d0b782;
+}
+
+
+
+
+body {
+    color: #435757;
+    /*background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);*/
+    background-color: var(--backgroundColor);
+    background-repeat: no-repeat;
+    font: 500 1.2em/1.2 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+
+.App {
+    max-width: 800px;
+    margin: 50px auto;
+    border-top: 5px solid var(--appBorderTopColor);
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.navBar {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--headerColor);
+    background-color: rgba(255, 255, 255, .1);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+.tasksContainer {
+    width: 85%;
+    padding-bottom: 50px;
+}
+
+.noTasks {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--noTaskColor);
+}
+
+.noTasks svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--noTaskColor);
+}
+
+
+
+@media (max-width: 450px) {
+    .navBar {
+        margin-bottom: 20px;
+    }
+}
+
+
+

@@ -1,0 +1,32 @@
+:root {
+    --taskTextFieldBackColor: transparent;
+    --taskTextFieldTextColor: #435757;
+    --taskTextFieldEditBackColor: transparent;
+    --taskTextFieldEditTextColor: #435757;
+}
+
+[dark] {
+    --taskTextFieldBackColor: transparent;
+    --taskTextFieldTextColor: #d0b782;
+    --taskTextFieldEditBackColor: transparent;
+    --taskTextFieldEditTextColor: #d0b782;
+}
+
+
+.taskTextField {
+    background-color: var(--taskTextFieldBackColor);
+    font-size: 20px;
+    color: var(--taskTextFieldTextColor);
+    margin-left: 10px;
+    width: 80%;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.taskTextFieldEdit {
+    background-color: var(--taskTextFieldEditBackColor);
+    font-size: 20px;
+    color: var(--taskTextFieldEditTextColor);
+    margin-left: 20px;
+    width: 80%;
+}

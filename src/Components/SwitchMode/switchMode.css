@@ -1,0 +1,46 @@
+:root {
+    --noTaskColor: #435757;
+}
+
+[dark] {
+    --noTaskColor: #d0b782;
+}
+
+
+
+.switchMode {
+    width: 15%;
+}
+
+.switchModeCheckbox {
+    display: none;
+}
+
+.switchModeWrapper {
+    width: 70px;
+    height: 35px;
+    border: 2px solid var(--noTaskColor);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.lightMode {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #435757;
+}
+
+.darkMode {
+    display: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #d0b782;
+    margin-left: 60%;
+}

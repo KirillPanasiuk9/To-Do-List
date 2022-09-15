@@ -1,0 +1,26 @@
+:root {
+    --deleteButtonColor: #435757;
+}
+
+[dark] {
+    --deleteButtonColor: #d0b782;
+}
+
+.deleteButton {
+    background: none;
+    margin-left: 10px;
+}
+
+.deleteButton svg path {
+    fill: var(--deleteButtonColor);
+}
+
+.deleteButton:hover .deleteButton_el {
+    fill: red;
+}
+
+
+svg {
+    width: 25px;
+    height: 25px;
+}

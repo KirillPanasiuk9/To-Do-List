@@ -1,0 +1,21 @@
+:root {
+    --taskCompletedColor: #435757;
+}
+
+[dark] {
+    --taskCompletedCountColor: #d0b782;
+}
+
+.taskCompletedCount {
+    font-size: 18px;
+    color: var(--taskCompletedCountColor);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.taskCompletedCount span {
+    font-size: 22px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}

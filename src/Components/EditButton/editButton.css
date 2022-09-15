@@ -1,0 +1,27 @@
+:root {
+    --editButtonColor: #435757;
+    --editButtonHoverColor: white;
+}
+
+[dark] {
+    --editButtonColor: #d0b782;
+    --editButtonHoverColor: white;
+}
+
+
+.editButton {
+    background: none;
+}
+
+.editButton svg path {
+    fill: var(--editButtonColor);
+}
+
+.editButton:hover .editButton_el {
+    fill: var(--editButtonHoverColor);
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+}

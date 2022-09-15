@@ -1,0 +1,17 @@
+.completedTask {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 40px;
+    border: #435757 2px solid;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+    text-decoration: line-through;
+    overflow-wrap: anywhere;
+}

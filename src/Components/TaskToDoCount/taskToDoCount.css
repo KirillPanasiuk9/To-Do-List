@@ -1,0 +1,21 @@
+:root {
+    --taskToDoCountColor: #435757;
+}
+
+[dark] {
+    --taskToDoCountColor: #d0b782;
+}
+
+.taskToDoCount {
+    font-size: 18px;
+    color: var(--taskToDoCountColor);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.taskToDoCount span {
+    font-size: 22px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
