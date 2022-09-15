@@ -37,6 +37,7 @@ function App() {
 
     return (
       <div className="App">
+
           <div className="navBar">
               <h1>To Do List</h1>
               <SwitchMode/>
