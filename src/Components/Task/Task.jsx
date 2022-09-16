@@ -14,6 +14,17 @@ const Task = ({
               }) => {
 
     const [edit, setEdit] = useState(true)
+    const [textFieldEdit, setTextFieldEdit] = useState(task.text)
+    const shakeEditedTask = (id) => {
+        let editedTask = document.getElementById(id);
+        editedTask.style.transform = "translate(5px,0)"
+        setTimeout(() => editedTask.style.transform = "translate(-6px,0)", 70)
+        setTimeout(() => editedTask.style.transform = "translate(6px,0)", 140)
+        setTimeout(() => editedTask.style.transform = "translate(-6px,0)", 210)
+        setTimeout(() => editedTask.style.transform = "translate(6px,0)", 280)
+        setTimeout(() => editedTask.style.transform = "translate(-6px,0)", 350)
+        setTimeout(() => editedTask.style.transform = "translate(0,0)", 420)
+    }
 
 
     const handleChange = () => {
@@ -27,36 +38,54 @@ const Task = ({
     }
 
     const handleInputChange = (event) => {
-        const text = event.target.value
+        setTextFieldEdit(event.target.value)
+    }
+
+    const handleEditChangeSave = () => {
+        const text = textFieldEdit;
         const updTask = {
             ...task,
             text,
         }
-        updateTask(updTask)
+
+        if (text === "") {
+            let id = (task.id/444).toString()
+            shakeEditedTask(id)
+        } else {
+            updateTask(updTask);
+            setEdit(!edit);
+        }
     }
 
-    const handleEditChange = () => {
-        setEdit(!edit)
+    const handleEditChangeUnSave = () => {
+        setTextFieldEdit(task.text)
+        setEdit(!edit);
     }
 
 
     return edit === true ? (
+
         <div className="task">
             <TaskCheckBox task={task} handleChange={handleChange}/>
             <div className="taskTextField">
                 {task.text}
             </div>
             <div className='taskButtons'>
-                <EditButton handleEditChange={handleEditChange}/>
+                <EditButton handleEditChangeSave={handleEditChangeSave}/>
                 <DeleteButton task={task} deleteTask={deleteTask}/>
             </div>
         </div>
 
     ) : (
-        <div className="task task-edited">
-            <TaskTextFieldEdit task={task} handleInputChange={handleInputChange}/>
+        <div className="task task-edited" id={task.id/444}>
+            <TaskTextFieldEdit
+                handleInputChange={handleInputChange}
+                handleEditChangeSave={handleEditChangeSave}
+                textFieldEdit={textFieldEdit}
+                handleEditChangeUnSave={handleEditChangeUnSave}
+            />
             <div className='taskButtons taskButtons-edited'>
-                <button className="saveEditButton" onClick={handleEditChange}>
+                <button className="saveEditButton" onClick={handleEditChangeSave}>
                     {"Save"}
                 </button>
             </div>
