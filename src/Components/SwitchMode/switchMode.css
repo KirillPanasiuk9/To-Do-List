@@ -11,7 +11,6 @@
 .switchMode {
     width: 15%;
     margin-right: 7%;
-    /*border: 2px solid var(--noTaskColor);*/
 }
 
 .switchModeCheckbox {
