@@ -44,7 +44,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     --noTaskColor: #435757;
 }
 
-[dark] {
+.dark {
     --backgroundColor: #0d261a;
     --appBorderTopColor: #d0b782;
     --headerColor: #d0b782;

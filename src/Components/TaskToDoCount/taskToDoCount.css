@@ -2,7 +2,7 @@
     --taskToDoCountColor: #435757;
 }
 
-[dark] {
+.dark {
     --taskToDoCountColor: #d0b782;
 }
 

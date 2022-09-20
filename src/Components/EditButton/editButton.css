@@ -3,7 +3,7 @@
     --editButtonHoverColor: white;
 }
 
-[dark] {
+.dark {
     --editButtonColor: #d0b782;
     --editButtonHoverColor: white;
 }

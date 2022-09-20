@@ -5,7 +5,7 @@
     --taskTextFieldEditTextColor: #435757;
 }
 
-[dark] {
+.dark {
     --taskTextFieldBackColor: transparent;
     --taskTextFieldTextColor: #d0b782;
     --taskTextFieldEditBackColor: transparent;

@@ -7,7 +7,7 @@
     --taskEditSaveButtonTextColor: #d0b782;
 }
 
-[dark] {
+.dark {
     --taskBorderColor: #d0b782;
     --taskBackColor: transparent;
     --taskEditShadowColor: #d0b782;

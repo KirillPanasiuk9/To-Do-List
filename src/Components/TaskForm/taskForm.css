@@ -13,7 +13,7 @@
     --addTaskButtonTextMobilColor: #d0b782;
 }
 
-[dark] {
+.dark {
     --taskInputBorderColor: #d0b782;
     --taskInputTextColor: #d0b782;
     --taskInputFocusShadowColor: #d0b782;

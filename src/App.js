@@ -1,15 +1,51 @@
 import './App.css';
-import Task from "./Components/Task/Task";
-import React, {lazy, useState} from "react";
+import React, {useEffect, useState} from "react";
 import TaskList from "./Components/TaskList/TaskList";
 import TaskForm from "./Components/TaskForm/TaskForm";
 import CompletedTaskList from "./Components/CompletedTaskList/CompletedTaskList";
 import SwitchMode from "./Components/SwitchMode/SwitchMode";
 
-function App() {
+const getLocalDoneTasks = () => {
+    const completedTask = localStorage.getItem("completedTasks");
+    return completedTask ? JSON.parse(completedTask) : [];
+};
 
-    const [taskList, setTaskList] = useState([])
-    const [completedTasks, setCompletedTasks] = useState([])
+const getLocalTasks = () => {
+    const taskList = localStorage.getItem("taskList");
+    return taskList ? JSON.parse(taskList) : [];
+};
+
+const getLocalMode = () => {
+    if (localStorage.getItem("dark-mode") === "true") {
+        document.body.classList.add("dark");
+        return true;
+    }
+};
+
+
+
+
+function App() {
+    const [taskList, setTaskList] = useState(() => getLocalTasks());
+    const [completedTasks, setCompletedTasks] = useState(getLocalDoneTasks());
+    const [mode, setMode] = useState(getLocalMode());
+
+    useEffect(
+        () => localStorage.setItem("taskList", JSON.stringify(taskList)),
+        [taskList]
+    );
+
+    useEffect(
+        () => localStorage.setItem("completedTasks", JSON.stringify(completedTasks)),
+        [completedTasks]
+    );
+
+    useEffect(() => {
+        localStorage.setItem(
+            "dark-mode",
+            document.body.classList.contains("dark") ? "true" : "false"
+        );
+    });
 
     const createTask = (newTask) => {
         setCompletedTasks(completedTasks.filter(task => task.id !== newTask.id))
@@ -40,7 +76,7 @@ function App() {
 
           <div className="navBar">
               <h1>To Do List</h1>
-              <SwitchMode/>
+              <SwitchMode mode={mode} setMode={setMode}/>
           </div>
           <TaskForm createTask={createTask}/>
 
@@ -87,6 +123,9 @@ function App() {
 }
 
 export default App;
+
+
+
 
 
 // const data = {

@@ -1,9 +1,13 @@
 :root {
     --noTaskColor: #435757;
+    --lightButtonDisplay: block;
+    --darkButtonDisplay: none;
 }
 
-[dark] {
+.dark {
     --noTaskColor: #d0b782;
+    --lightButtonDisplay: none;
+    --darkButtonDisplay: block;
 }
 
 
@@ -13,13 +17,14 @@
     margin-right: 7%;
 }
 
-.switchModeCheckbox {
-    display: none;
-}
+/*.switchModeCheckbox {*/
+/*    display: none;*/
+/*}*/
 
 .switchModeWrapper {
     width: 70px;
     height: 35px;
+    background: none;
     border: 2px solid var(--noTaskColor);
     border-radius: 15px;
     display: flex;
@@ -31,6 +36,7 @@
 }
 
 .lightMode {
+    display: var(--lightButtonDisplay);
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -38,7 +44,7 @@
 }
 
 .darkMode {
-    display: none;
+    display: var(--darkButtonDisplay);
     width: 25px;
     height: 25px;
     border-radius: 50%;

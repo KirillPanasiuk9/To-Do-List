@@ -2,7 +2,7 @@
     --deleteButtonColor: #435757;
 }
 
-[dark] {
+.dark {
     --deleteButtonColor: #d0b782;
 }
 

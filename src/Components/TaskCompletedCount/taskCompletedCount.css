@@ -2,7 +2,7 @@
     --taskCompletedColor: #435757;
 }
 
-[dark] {
+.dark {
     --taskCompletedCountColor: #d0b782;
 }
 
