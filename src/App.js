@@ -124,31 +124,3 @@ function App() {
 
 export default App;
 
-
-
-
-
-// const data = {
-//     allIds: [/* your all ids like array*/],
-//     byId: {
-//         id1: {},
-//         //rest of data elements
-//     }
-// }
-//
-// data.allIds.map((id) => {
-//     <Task task={data.byId[id]} />
-// })
-
-// setState((prev) => ({
-//     ...prev,
-//     byId: {
-//         ...prev.byId,
-//         [updTask.id]: updTask,
-//     }
-// }))
-
-// setTaskList((prev) => {
-//     prev[index] = updTask;
-//     return prev;
-// })
